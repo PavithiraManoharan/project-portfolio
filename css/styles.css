@@ -1,0 +1,71 @@
+/* General styles */
+* {
+    font: 1em/1.5 "Roboto Condensed", sans-serif;
+}
+body {
+    background-color: #efefef;
+}
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #000;
+}
+header .logo img{
+   width: 100%;
+   height: auto;
+   pointer-events: none;
+}
+header .logo {
+    width: 15%;
+}
+/* Media Queries */
+@media (max-width: 450px) {
+    header .main-heading h1 {
+        font-size: 1em;
+    }
+    header .main-heading h2 {
+        font-size: 0.75em;
+    }
+}
+@media (min-width: 451px) and (max-width: 768px) {
+    header .main-heading h1 {
+        font-size: 2em;
+    }
+    header .main-heading h2 {
+        font-size: 1.5em;
+    }
+    header .sidebar-menu {
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 768px) {
+    header .main-heading {
+        width: 70%;
+        text-align: center;
+    }
+    header .sidebar-menu {
+        width: 15%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        margin: 1em;
+    }
+    header .main-heading {
+        width: 85%;
+    }
+    header .main-heading h1 {
+        font-size: 3em;
+        text-align: right;
+    }
+    header .main-heading h2 {
+        font-size: 2.5em;
+        text-align: right;
+    }
+    header .sidebar-menu {
+        display: none;
+    }
+   
+}
