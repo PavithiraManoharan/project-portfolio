@@ -2,43 +2,48 @@
 * {
     font: 1em/1.5 "Roboto Condensed", sans-serif;
 }
-#canvas-menu {
-    display: flex;
-    background: #d6d6d6;
-    width: 300px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-transform: translate(-300px, 0);
-    transform: translate(-300px, 0);
-    transition: transform 0.3s ease;
-}
-#canvas-menu .colors-used {
-    width: 80%;
-    margin: 10px;
-}
-#canvas-menu #close-sidebar-menu {
-    width: 20%;
-    text-align: center;
-    margin: 10px 0 0 0;
-    font-size: 1.2em;
-}
-/* nav #close-sidebar-menu {
 
-} */
-#canvas-menu.open {
-    transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-}
 body {
     background-color: #efefef;
+    color: #96858f;
 }
 
+.colors-used {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    margin: 0 0 10px 0;
+}
+
+.color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#canvas-menu .colors-used .primary-color, #canvas-menu .colors-used .secondary-color, #canvas-menu .colors-used .hr-color {
+    height: 70px;
+    width: 70px;
+}
+
+#canvas-menu .colors-used .primary-color {
+    background: #96858f;
+}
+#canvas-menu .colors-used .secondary-color {
+    background: #9099a2;
+}
+#canvas-menu .colors-used .hr-color {
+    background: #6d7993;
+}
 header {
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #6d7993;
 }
 
 header .logo img{
@@ -53,10 +58,12 @@ header .logo {
 
 header .main-heading h1 {
     font-size: 1.5em;
+    color: #9099a2;
 }
 
 header .main-heading h2 {
     font-size: 1em;
+    color: #9099a2;
 }
 
 #banner-img {
@@ -86,7 +93,38 @@ header .main-heading h2 {
         text-align: right;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 786px) {
+    #canvas-menu {
+        display: flex;
+        background: #e7e7e7;
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;
+    }
+    #canvas-menu .colors-used {
+        width: 80%;
+        margin: 10px;
+        margin-top: 2em;
+    }
+    #canvas-menu #close-sidebar-menu {
+        width: 20%;
+        text-align: center;
+        margin: 10px 0 0 0;
+        font-size: 1.2em;
+    }
+    /* nav #close-sidebar-menu {
+    
+    } */
+    #canvas-menu.open {
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+    }
+
     header .main-heading {
         width: 70%;
     }
@@ -101,12 +139,32 @@ header .main-heading h2 {
     }
 }
 
-@media (min-width: 769px) {
-    nav {
+@media (min-width: 787px) {
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    #close-sidebar-menu {
+        display: none;
+    }
+
+    #canvas-menu {
+        align-self: stretch;
+        width: 15%;
         position: relative;
         transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
+        margin-top: 8.7em;
     }
+    
+    .main-section {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+    }
+
     header .logo {
         width: 10%;
     }
@@ -124,11 +182,30 @@ header .main-heading h2 {
         margin-top: 1.5em;
     }
 }
+@media (min-width: 787px) and (max-width: 1199px) {
+    #canvas-menu .colors-used .primary-color, #canvas-menu .colors-used .secondary-color, #canvas-menu .colors-used .hr-color {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (min-width: 820px) {
+    .colors-used {
+        height: 95%;
+    }
+}
+
+@media (min-width: 987px) {
+    #canvas-menu .colors-used .primary-color, #canvas-menu .colors-used .secondary-color, #canvas-menu .colors-used .hr-color {
+        height: 70px;
+        width: 70px;
+    }
+}
+
 @media (min-width: 1200px) {
    body {
        width: 1200px;
        margin-left: auto;
        margin-right: auto;
-       display: block;
    }
 }
