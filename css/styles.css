@@ -2,72 +2,127 @@
 * {
     font: 1em/1.5 "Roboto Condensed", sans-serif;
 }
+#canvas-menu {
+    display: flex;
+    background: #d6d6d6;
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+}
+#canvas-menu .colors-used {
+    width: 80%;
+    margin: 10px;
+}
+#canvas-menu #close-sidebar-menu {
+    width: 20%;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+}
+/* nav #close-sidebar-menu {
+
+} */
+#canvas-menu.open {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+}
 body {
     background-color: #efefef;
 }
+
 header {
     display: flex;
     align-items: center;
     border-bottom: 2px solid #000;
 }
+
 header .logo img{
    width: 100%;
    height: auto;
    pointer-events: none;
 }
+
 header .logo {
     width: 15%;
 }
+
+header .main-heading h1 {
+    font-size: 1.5em;
+}
+
+header .main-heading h2 {
+    font-size: 1em;
+}
+
+#banner-img {
+    width: 100%;
+}
+
 /* Media Queries */
 @media (max-width: 450px) {
+    header .main-heading {
+        text-align: center;
+    }
+
     header .main-heading h1 {
         font-size: 1em;
     }
+
     header .main-heading h2 {
         font-size: 0.75em;
     }
 }
 @media (min-width: 451px) and (max-width: 768px) {
-    header .main-heading h1 {
-        font-size: 2em;
-    }
-    header .main-heading h2 {
+    header #sidebar-menu-icon {
         font-size: 1.5em;
     }
-    header .sidebar-menu {
-        font-size: 1.5em;
+
+    header .main-heading {
+        text-align: right;
     }
 }
 @media (max-width: 768px) {
     header .main-heading {
         width: 70%;
-        text-align: center;
     }
-    header .sidebar-menu {
+
+    header #sidebar-menu-icon {
         width: 15%;
         text-align: center;
+    }
+
+    #banner-img {
+        margin-top: 1em;
     }
 }
 
 @media (min-width: 769px) {
-    body {
-        margin: 1em;
+    nav {
+        position: relative;
+        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
     }
+    header .logo {
+        width: 10%;
+    }
+
     header .main-heading {
-        width: 85%;
-    }
-    header .main-heading h1 {
-        font-size: 3em;
+        width: 90%;
         text-align: right;
     }
-    header .main-heading h2 {
-        font-size: 2.5em;
-        text-align: right;
-    }
-    header .sidebar-menu {
+
+    header #sidebar-menu-icon {
         display: none;
     }
-   
+
+    #banner-img {
+        margin-top: 1.5em;
+    }
 }
 @media (min-width: 1200px) {
    body {

@@ -20,7 +20,17 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <nav id="canvas-menu">
+            <section class="colors-used">
+
+            </section>
+            <span id="close-sidebar-menu"><i class="fas fa-times"></i></span>
+        </nav>
         <header>
+            <!-- Side Bar Off-Canvas Menu -->
+            <div id="sidebar-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
             <!-- Logo -->
             <div class="logo">
                 <img src="img/logo.svg" alt="Pavithira Manoharan - Logo" title="Pavithira Manoharan - Logo">
@@ -30,14 +40,17 @@
                 <h1>PAVITHIRA MANOHARAN</h1>
                 <h2 class="small">E-Commerce Web Developer</h2>
             </div>
-            <div class="sidebar-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+            
         </header>
+      
         <main>
             <!-- Hero Image -->
-            <section>
-
+            <section class="banner">
+                <picture>
+                    <source media="(max-width: 450px)" srcset="img/small-banner.jpg" type="image/jpeg">
+                    <source media="(min-width: 451px)" srcset="img/banner.jpg" type="image/jpeg">
+                    <img id="banner-img" src="img/banner.jpg" alt="Banner Image" title="Banner Image">
+                </picture>
             </section>
             <!-- Featured Work -->
             <section>
@@ -50,6 +63,6 @@
         <!-- <script src="" async defer></script> -->
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+        <script src="js/scripts.js"></script>
     </body>
 </html>
