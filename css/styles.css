@@ -16,14 +16,18 @@ body {
     align-items: center;
 }
 
-figure {
+/* figure {
     margin: 0 0 10px 0;
-}
+} */
 
 .color {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.color h5 {
+    margin: 5px 0;
 }
 
 #canvas-menu .colors-used .primary-color, #canvas-menu .colors-used .secondary-color, #canvas-menu .colors-used .hr-color {
@@ -195,7 +199,7 @@ header .main-heading h2 {
     }
 }
 
-@media (min-width: 987px) {
+@media (min-width: 1010px) {
     #canvas-menu .colors-used .primary-color, #canvas-menu .colors-used .secondary-color, #canvas-menu .colors-used .hr-color {
         height: 70px;
         width: 70px;
