@@ -13,6 +13,9 @@ header .main-heading {
     text-align: right;
 }
 
+.banner p {
+    text-align: center;
+}
 .colors-used {
     display: flex;
     flex-wrap: wrap;
@@ -201,7 +204,7 @@ footer .email-to {
     #canvas-menu .colors-used {
         width: 100%;
         margin-top: 2em;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     
     /* nav #close-sidebar-menu {
