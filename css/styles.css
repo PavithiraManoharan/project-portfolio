@@ -196,6 +196,7 @@ footer .email-to {
     
     } */
     #canvas-menu.open {
+        overflow-y: hidden;
         transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
     }
@@ -219,6 +220,7 @@ footer .email-to {
 
     .featured-work article {
         margin-bottom: 2em;
+        width: 100%;
     }
 }
 
