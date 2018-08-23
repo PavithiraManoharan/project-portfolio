@@ -128,6 +128,17 @@ footer .email-to {
 }
 
 /* Media Queries */
+@media (orientation: landscape) and (max-width: 786px) {
+    #canvas-menu .colors-used .primary-color, #canvas-menu .colors-used .secondary-color, #canvas-menu .colors-used .hr-color {
+        height: 50px;
+        width: 50px;
+    }
+
+    #canvas-menu .colors-used {
+       flex-direction: row;
+    }
+
+}
 @media (max-width: 500px) {
     .featured-work picture, .featured-work img {
         width: 100%;
