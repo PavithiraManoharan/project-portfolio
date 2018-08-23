@@ -85,7 +85,7 @@ header .main-heading h2 {
     width: 100%;
 }
 
-.main-section .featured-work h1{
+.main-section .featured-work h3{
     width: 100%;
 }
 
@@ -213,7 +213,7 @@ footer .email-to {
         margin-top: 1em;
     }
 
-    .featured-work h1 {
+    .featured-work h3 {
         text-align: center;
     }
 
