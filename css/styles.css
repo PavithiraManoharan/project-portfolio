@@ -1,19 +1,27 @@
 /* General styles */
-* {
-    font: 1em/1.5 "Roboto Condensed", sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
 }
 
 body {
     background-color: #efefef;
     color: #96858f;
+    font: 1em/1.5 "Roboto Condensed", sans-serif;
+}
+
+header .main-heading {
+    text-align: right;
 }
 
 .colors-used {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+}
+
+.colors-used h3 {
+    margin-top: 5px;
 }
 
 /* figure {
@@ -38,12 +46,15 @@ body {
 #canvas-menu .colors-used .primary-color {
     background: #96858f;
 }
+
 #canvas-menu .colors-used .secondary-color {
     background: #9099a2;
 }
+
 #canvas-menu .colors-used .hr-color {
     background: #6d7993;
 }
+
 header {
     display: flex;
     align-items: center;
@@ -61,23 +72,68 @@ header .logo {
 }
 
 header .main-heading h1 {
-    font-size: 1.5em;
     color: #9099a2;
+    margin-bottom: 0;
 }
 
 header .main-heading h2 {
-    font-size: 1em;
     color: #9099a2;
+    margin-top: 0;
 }
 
 #banner-img {
     width: 100%;
 }
 
+.main-section .featured-work h1{
+    width: 100%;
+}
+
+.main-section .featured-work .featured-work-title, .main-section .featured-work .featured-work-link  {
+    margin: 0.5em 0 0 0;
+    text-align: center;
+}
+
+.featured-work article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.featured-work {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3.5em;
+}
+
+.featured-work picture, .featured-work img{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #6d7993;
+}
+a:hover, a:active {
+    color: #9099a2;
+}
+
+footer {
+    padding: 1em 0;
+    font-size: 0.8em;
+    text-align: right;
+    border-top: 2px solid #6d7993;
+}
+
+footer .email-to {
+    margin-left: 2em;
+}
 /* Media Queries */
-@media (max-width: 450px) {
-    header .main-heading {
-        text-align: center;
+@media (max-width: 500px) {
+    
+    .featured-work picture, .featured-work img {
+        width: 100%;
     }
 
     header .main-heading h1 {
@@ -88,18 +144,21 @@ header .main-heading h2 {
         font-size: 0.75em;
     }
 }
-@media (min-width: 451px) and (max-width: 768px) {
+
+@media (min-width: 501px) and (max-width: 786px) {
     header #sidebar-menu-icon {
         font-size: 1.5em;
     }
 
-    header .main-heading {
-        text-align: right;
+    .featured-work picture, .featured-work img{
+        width: 75%;
     }
 }
+
 @media (max-width: 786px) {
     #canvas-menu {
         display: flex;
+        flex-direction: column;
         background: #e7e7e7;
         width: 300px;
         height: 100%;
@@ -110,17 +169,29 @@ header .main-heading h2 {
         transform: translate(-300px, 0);
         transition: transform 0.3s ease;
     }
-    #canvas-menu .colors-used {
-        width: 80%;
-        margin: 10px;
-        margin-top: 2em;
+
+    #sidebar-menu-icon:hover, #close-sidebar-menu:hover {
+        cursor: pointer;
     }
+
     #canvas-menu #close-sidebar-menu {
-        width: 20%;
-        text-align: center;
-        margin: 10px 0 0 0;
+        width: 100%;
+        text-align: right;
+        /* padding: 20px; */
         font-size: 1.2em;
     }
+
+    #canvas-menu #close-sidebar-menu .fa-times {
+        margin: 20px 20px 0 0;
+    }
+
+    #canvas-menu .colors-used {
+        width: 100%;
+        margin-top: 2em;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    
     /* nav #close-sidebar-menu {
     
     } */
@@ -141,6 +212,14 @@ header .main-heading h2 {
     #banner-img {
         margin-top: 1em;
     }
+
+    .featured-work h1 {
+        text-align: center;
+    }
+
+    .featured-work article {
+        margin-bottom: 2em;
+    }
 }
 
 @media (min-width: 787px) {
@@ -148,6 +227,10 @@ header .main-heading h2 {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+    }
+
+    .colors-used {
+        justify-content: flex-start;
     }
 
     #close-sidebar-menu {
@@ -160,7 +243,7 @@ header .main-heading h2 {
         position: relative;
         transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
-        margin-top: 8.7em;
+        margin-top: 9.5em;
     }
     
     .main-section {
@@ -185,7 +268,25 @@ header .main-heading h2 {
     #banner-img {
         margin-top: 1.5em;
     }
+
+    .featured-work {
+        justify-content: space-between;
+    }
+
+    .featured-work picture, .featured-work img{
+        width: 100%;
+    }
+
+    .featured-work article {
+        width: 30%;
+    }
+
+    .featured-work h1 {
+        font-size: 1.75em;
+    }
+   
 }
+
 @media (min-width: 787px) and (max-width: 1199px) {
     #canvas-menu .colors-used .primary-color, #canvas-menu .colors-used .secondary-color, #canvas-menu .colors-used .hr-color {
         height: 50px;
